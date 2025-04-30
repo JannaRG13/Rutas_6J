@@ -14,13 +14,36 @@ class PantallaDos extends StatelessWidget {
             )),
         backgroundColor: Color(0xff6db285),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('¡Regresar!'),
-        ),
+      body: Column(
+        children: [
+          Center(
+            child: Container(
+              height: 120.0,
+              width: double.infinity,
+              color: Colors.blueGrey,
+              child: const Align(
+                alignment: Alignment.bottomLeft,
+                child: FlutterLogo(
+                  size: 60,
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('¡Regresar!'),
+            ),
+          ),
+        ],
       ),
     );
   }

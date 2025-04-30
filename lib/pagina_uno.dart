@@ -6,33 +6,52 @@ class PantallaUno extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Panta Uno',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 25.0,
-            ),
+      appBar: AppBar(
+        title: const Text(
+          'Pantalla Uno',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 25.0,
           ),
-          backgroundColor: Color(0xffffb9d1),
         ),
-        body: Column(
+        backgroundColor: const Color(0xffffb9d1),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, // Centra verticalmente
           children: [
-            Center(
-                child: ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/pantalla2');
-              },
-              child: const Text('Ver pantalla 2'),
-            )),
-            Center(
-                child: ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/pantalla3');
-              },
-              child: const Text('Ver pantalla 3'),
-            )),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, '/pantalla2'),
+              child: const Text('Logo FLutter'),
+            ),
+            const SizedBox(height: 20), // Espaciado entre botones
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, '/pantalla3'),
+              child: const Text('Animación Flutter'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, '/pantalla4'),
+              child: const Text('Animación Padding'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, '/pantalla5'),
+              child: const Text('Contador'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, '/pantalla6'),
+              child: const Text('Pantalla Blur'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, '/pantalla7'),
+              child: const Text('Pantalla Iconos'),
+            ),
           ],
-        ));
+        ),
+      ),
+    );
   }
 }
